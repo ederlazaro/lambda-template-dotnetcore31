@@ -1,4 +1,4 @@
-# homologacion-zonas-virtuales
+# lambda-template-dotnetcore31
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
@@ -48,7 +48,7 @@ The first command will build the source of your application. The second command 
 Build your application with the `sam build` command.
 
 ```bash
-homologacion-zonas-virtuales$ sam build
+lambda-template-dotnetcore31$ sam build
 ```
 
 The SAM CLI installs dependencies defined in `src/LoadFunction.csproj`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
@@ -58,7 +58,7 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-homologacion-zonas-virtuales$ sam local invoke LoadFunction --event events/event.json
+lambda-template-dotnetcore31$ sam local invoke LoadFunction --event events/event.json
 ```
 
 ## Add a resource to your application
@@ -71,7 +71,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-homologacion-zonas-virtuales$ sam logs -n LoadFunction --stack-name homologacion-zonas-virtuales --tail
+lambda-template-dotnetcore31$ sam logs -n LoadFunction --stack-name lambda-template-dotnetcore31 --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -81,7 +81,7 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `test` folder in this project.
 
 ```bash
-homologacion-zonas-virtuales$ dotnet test test/LoadFunction.Test
+lambda-template-dotnetcore31$ dotnet test test/LoadFunction.Test
 ```
 
 ## Cleanup
@@ -89,7 +89,7 @@ homologacion-zonas-virtuales$ dotnet test test/LoadFunction.Test
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-aws cloudformation delete-stack --stack-name homologacion-zonas-virtuales
+aws cloudformation delete-stack --stack-name lambda-template-dotnetcore31
 ```
 
 ## Resources
